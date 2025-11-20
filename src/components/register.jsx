@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -135,7 +136,11 @@ export default function RegisterPage() {
             </div>
             <button type="submit" className="btn btn-primary w-100 mt-3">Create Account</button>
           </form>
-          <p className="text-center text-sm mt-3">Already have an account? <a href="/login" className="text-decoration-none">Login</a></p>
+          <p className="text-center text-sm mt-3">Already have an account? 
+            <Link to='/login'>
+            <a href="/login" className="text-decoration-none">Login</a>
+            </Link>
+            </p>
         </div>
       </div>
     </div>
